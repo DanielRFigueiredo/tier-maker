@@ -1,0 +1,128 @@
+.ContainerModal {
+  padding: 3rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+
+  .btnClose {
+    background-color: transparent;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    >svg {
+      color: black;
+      font-size: 1.5rem;
+      transition: filter .2s;
+
+      &:hover {
+        filter: opacity(.5);
+      }
+    }
+  }
+
+  header {
+    display: flex;
+    margin-bottom: 1.5rem;
+    flex-direction: column;
+
+
+
+    .areaColor {
+      display: flex;
+      justify-content: center;
+
+
+      div {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        
+        &+div {
+          margin-left: .25rem;
+        }
+        
+        transition: all 0.2;
+        
+        &:hover{
+          cursor: pointer;
+        }
+        
+        &.active{
+          border: 2px solid black;
+          filter: blur(2px);
+          transform: scale(1.1);
+        }
+      }
+    }
+
+
+
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    textarea {
+      width: 100%;
+      background-color: #FFF;
+      border: 1px solid #BBB;
+      padding: .25rem;
+      margin-top: .5rem;
+      margin-bottom: 1.5rem;
+    }
+
+
+    >div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 1rem;
+      column-gap: .5rem;
+
+
+
+      button {
+        background-color: #DDD;
+        padding: .5rem 1rem;
+        border-radius: .25rem;
+        width: 100%;
+        transition: filter .2s;
+
+
+        &:hover {
+          filter: brightness(.9);
+        }
+      }
+
+
+    }
+
+  }
+
+
+  .save {
+    height: 3rem;
+    width: 100%;
+    background-color: var(--yellow-500);
+    border-radius: .5rem;
+    margin-top: 1.5rem;
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+
+
+
+  }
+
+
+
+}
